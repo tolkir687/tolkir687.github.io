@@ -28,6 +28,60 @@
     --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+/* ===== Back to Top ===== */
+.back-to-top {
+    position: fixed;
+    bottom: 36px;
+    right: 36px;
+    width: 44px;
+    height: 44px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: all var(--transition);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+
+.back-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.back-to-top:hover {
+    transform: translateY(-4px);
+}
+
+.back-to-top .arrow {
+    display: block;
+    width: 26px;
+    height: 26px;
+    border-top: 3.5px solid rgba(135, 206, 250, 0.7);
+    border-left: 3.5px solid rgba(135, 206, 250, 0.7);
+    transform: rotate(45deg);
+    transition: all var(--transition);
+    filter: drop-shadow(0 0 5px rgba(129, 140, 248, 0.7))
+           drop-shadow(0 0 10px rgba(6, 182, 212, 0.45));
+}
+
+.back-to-top:hover .arrow {
+    border-top-color: rgba(135, 206, 250, 0.95);
+    border-left-color: rgba(135, 206, 250, 0.95);
+    filter: drop-shadow(0 0 8px rgba(129, 140, 248, 0.9))
+           drop-shadow(0 0 16px rgba(6, 182, 212, 0.6));
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+    40% { transform: translateY(-8px); }
+    60% { transform: translateY(-4px); }
+}
+
 /* ===== IT Background Elements ===== */
 .it-bg-elements {
     position: fixed;
@@ -375,6 +429,7 @@ a:hover {
     font-family: 'Fira Code', monospace;
     font-size: 0.85rem;
     line-height: 2;
+    color: var(--text-light);
 }
 
 .terminal-line {
