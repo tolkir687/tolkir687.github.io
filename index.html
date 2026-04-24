@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кирилл Толкачев — Резюме</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Floating Particles -->
+    <canvas id="particles"></canvas>
+
+    <!-- IT Background Elements -->
+    <div class="it-bg-elements">
+        <span class="it-bg-icon" style="top: 10%; left: 5%;">💻</span>
+        <span class="it-bg-icon" style="top: 20%; left: 85%;">🖥️</span>
+        <span class="it-bg-icon" style="top: 40%; left: 3%;">🖱️</span>
+        <span class="it-bg-icon" style="top: 60%; left: 90%;">💾</span>
+        <span class="it-bg-icon" style="top: 80%; left: 8%;">💿</span>
+        <span class="it-bg-icon" style="top: 35%; left: 92%;">📡</span>
+        <span class="it-bg-icon" style="top: 70%; left: 95%;">🔋</span>
+        <span class="it-bg-icon" style="top: 15%; left: 50%;">☁️</span>
+        <span class="it-bg-icon" style="top: 55%; left: 7%;">🔌</span>
+        <span class="it-bg-icon" style="top: 85%; left: 88%;">📱</span>
+    </div>
+
+    <!-- Навигация -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-content">
+            <a href="#hero" class="logo">КТ</a>
+            <ul class="nav-links">
+                <li><a href="#about">Обо мне</a></li>
+                <li><a href="#skills">Навыки</a></li>
+                <li><a href="#experience">Опыт</a></li>
+                <li><a href="#contacts">Контакты</a></li>
+            </ul>
+            <button class="nav-toggle" id="navToggle" aria-label="Меню">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Герой -->
+    <section class="hero" id="hero">
+        <div class="container hero-content">
+            <div class="hero-text">
+                <p class="hero-greeting">// Привет, я</p>
+                <h1 class="hero-name">Кирилл<br>Толкачев</h1>
+                <p class="hero-role">IT-архитектор</p>
+                <p class="hero-desc">20 лет опыта в телеком-биллинге и финтех системах. Проектирую и внедряю Mission Critical платформы, обеспечиваю отказоустойчивость и масштабируемость.</p>
+                <div class="hero-buttons">
+                    <a href="#contacts" class="btn btn-primary">Связаться</a>
+                    <a href="#about" class="btn btn-outline">Подробнее</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="terminal-window">
+                    <div class="terminal-header">
+                        <span class="terminal-dot red"></span>
+                        <span class="terminal-dot yellow"></span>
+                        <span class="terminal-dot green"></span>
+                        <span class="terminal-title">about.js</span>
+                    </div>
+                    <div class="terminal-body">
+                        <span class="terminal-line"><span class="t-prompt">&gt; </span><span class="t-keyword">const</span> developer = {</span>
+                        <span class="terminal-line">&nbsp;&nbsp;name: <span class="t-string">"Кирилл Толкачев"</span>,</span>
+                        <span class="terminal-line">&nbsp;&nbsp;role: <span class="t-string">"Platform Architect"</span>,</span>
+                        <span class="terminal-line">&nbsp;&nbsp;stack: [<span class="t-string">"Java"</span>, <span class="t-string">"K8s"</span>, <span class="t-string">"PostgreSQL"</span>],</span>
+                        <span class="terminal-line">&nbsp;&nbsp;<span class="t-func">passion</span>: <span class="t-string">"mission critical systems"</span></span>
+                        <span class="terminal-line">};<span class="t-cursor"></span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-hint">
+            <span>Вниз</span>
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- Обо мне -->
+    <section class="section" id="about">
+        <div class="grid-bg"></div>
+        <div class="container">
+            <h2 class="section-title">Обо мне</h2>
+            <div class="about-grid">
+                <div class="about-card">
+                    <div class="about-icon">🏗️</div>
+                    <h3>Архитектура решений</h3>
+                    <p>Разработка и утверждение архитектуры решений. Проектирование интеграций, анализ требований, определение NFR (масштабируемость, безопасность, отказоустойчивость).</p>
+                </div>
+                <div class="about-card">
+                    <div class="about-icon">☁️</div>
+                    <h3>Платформенные решения</h3>
+                    <p>Проектирование Mission Critical / КИИ платформ. Работа с Java, Kubernetes, PostgreSQL, Oracle, ClickHouse, Kafka, OpenSearch.</p>
+                </div>
+                <div class="about-card">
+                    <div class="about-icon">📊</div>
+                    <h3>Техническое руководство</h3>
+                    <p>Поддержка команды продукта, архитектурный надзор. Управление техническим долгом, сокращение бэклога, импортозамещение.</p>
+                </div>
+            </div>
+            <!-- Code illustration -->
+            <div class="about-illustration reveal">
+                <div class="code-block">
+                    <div class="code-block-header">
+                        <span class="terminal-dot red"></span>
+                        <span class="terminal-dot yellow"></span>
+                        <span class="terminal-dot green"></span>
+                        <span class="code-block-title">philosophy.ts</span>
+                    </div>
+                    <div class="code-block-body">
+                        <span class="t-keyword">interface</span> <span class="t-func">Developer</span> <span class="t-bracket">{</span><br>
+                        &nbsp;&nbsp;writeCode(): <span class="t-string">Clean</span>;<br>
+                        &nbsp;&nbsp;solveProblems(): <span class="t-string">Elegant</span>;<br>
+                        &nbsp;&nbsp;learn(): <span class="t-string">Always</span>;<br>
+                        <span class="t-bracket">}</span><br>
+                        <br>
+                        <span class="t-keyword">const</span> architect: <span class="t-func">PlatformArchitect</span> = {<br>
+                        &nbsp;&nbsp;design: () => <span class="t-string">"mission critical"</span>,<br>
+                        &nbsp;&nbsp;solveProblems: () => <span class="t-string">"highload & resilience"</span>,<br>
+                        &nbsp;&nbsp;mentor: () => <span class="t-string">"team growth"</span><br>
+                        };
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Навыки -->
+    <section class="section section-alt" id="skills">
+        <div class="grid-bg"></div>
+        <div class="container">
+            <h2 class="section-title">Навыки</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3><span class="skill-cat-icon">🏗️</span> Архитектура</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">System Design</span>
+                        <span class="skill-tag">UML</span>
+                        <span class="skill-tag">ArchiMate</span>
+                        <span class="skill-tag">C4</span>
+                        <span class="skill-tag">SOA</span>
+                        <span class="skill-tag">MSA</span>
+                        <span class="skill-tag">Arch. Patterns</span>
+                        <span class="skill-tag">TMForum FrameworX</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3><span class="skill-cat-icon">☁️</span> Технологии</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Linux</span>
+                        <span class="skill-tag">Java</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">Kubernetes</span>
+                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">PostgreSQL</span>
+                        <span class="skill-tag">Oracle</span>
+                        <span class="skill-tag">Key-Value</span>
+                        <span class="skill-tag">Kafka</span>
+                        <span class="skill-tag">RabbitMQ</span>
+                        <span class="skill-tag">REST API</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3><span class="skill-cat-icon">🛠️</span> Инструменты</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Jira</span>
+                        <span class="skill-tag">Confluence</span>
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">Visio</span>
+                        <span class="skill-tag">Bash</span>
+                        <span class="skill-tag">CI/CD</span>
+                        <span class="skill-tag">Enterprise Architect</span>
+                        <span class="skill-tag">LLM</span>
+                        <span class="skill-tag">Claude Code</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stats -->
+            <div class="stats-row">
+                <div class="stat-card reveal">
+                    <div class="stat-number">20</div>
+                    <div class="stat-label">Лет опыта</div>
+                </div>
+                <div class="stat-card reveal">
+                    <div class="stat-number">50+</div>
+                    <div class="stat-label">Проектов</div>
+                </div>
+
+            </div>
+
+            <!-- Tech logos -->
+            <div class="tech-banner">
+                <div class="tech-logo reveal" title="Java">☕</div>
+                <div class="tech-logo reveal" title="Kubernetes">☸️</div>
+                <div class="tech-logo reveal" title="PostgreSQL">🐘</div>
+                <div class="tech-logo reveal" title="Kafka">🟣</div>
+                <div class="tech-logo reveal" title="Docker">🐳</div>
+                <div class="tech-logo reveal" title="Linux">🐧</div>
+                <div class="tech-logo reveal" title="ClickHouse">⚡</div>
+                <div class="tech-logo reveal" title="RabbitMQ">🐰</div>
+                <div class="tech-logo reveal" title="OpenSearch">🔍</div>
+                <div class="tech-logo reveal" title="Prometheus">📊</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Опыт -->
+    <section class="section" id="experience">
+        <div class="grid-bg"></div>
+        <div class="container">
+            <h2 class="section-title">Опыт</h2>
+            <div class="timeline">
+                <div class="timeline-item reveal">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">Май 2024 — н.в.</span>
+                        <h3>Архитектор платформенных решений</h3>
+                        <p class="timeline-company">Иннотех, Группа компаний (Самара)</p>
+                        <p>Разработка и утверждение архитектуры решений. Проектирование интеграций со смежными сервисами. Анализ требований, определение NFR (масштабируемость, безопасность, отказоустойчивость). Соответствие compliance. Поддержка команды продукта, архитектурный надзор. Управление техническим долгом. Импортозамещение.</p>
+                        <p class="timeline-tech"><strong>Стек:</strong> Java, Kubernetes, PostgreSQL, ClickHouse, Astra Linux, Kafka, Active MQ, OpenSearch, Prometheus, S3</p>
+                    </div>
+                </div>
+                <div class="timeline-item reveal">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">Октябрь 2023 — Май 2024</span>
+                        <h3>Ведущий системный архитектор</h3>
+                        <p class="timeline-company">Nexign (Санкт-Петербург)</p>
+                        <p>Проектирование решений, highload, горизонтальное масштабирование, partitioning/sharding. Развитие BSS системы (TMForum Conformance). Проработка интеграций RestAPI/RabbitMQ/Kafka/Files. Обоснование включения в стек новых технологий. HLA/HLD, UML диаграммы. Подготовка ФС/ТС, GAP-анализ. Реализация замены legacy компонентов (Strangler Pattern).</p>
+                    </div>
+                </div>
+                <div class="timeline-item reveal">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">Июнь 2022 — Октябрь 2023</span>
+                        <h3>Главный эксперт по бизнес-системам</h3>
+                        <p class="timeline-company">Nexign (Санкт-Петербург)</p>
+                        <p>Руководство группой поддержки BSS-систем по направлению тарификации. Обеспечение индекса удовлетворенности клиентов. Техническая поддержка процессов upsale. Техническое руководство проектами внедрения новых релизов. Проведение обучения клиентов. Managed Service, Trouble shooting.</p>
+                    </div>
+                </div>
+                <div class="timeline-item reveal">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">Февраль 2022 — Май 2022</span>
+                        <h3>Технический менеджер проекта</h3>
+                        <p class="timeline-company">NetCracker Technology Corp.</p>
+                        <p>Управление командой технической поддержки уровня L2. Взаимодействие с клиентом, поддержка проекта на всем жизненном цикле.</p>
+                    </div>
+                </div>
+                <div class="timeline-item reveal">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">Март 2021 — Февраль 2022</span>
+                        <h3>Ведущий руководитель направления по ИТ</h3>
+                        <p class="timeline-company">SberTech (Самара)</p>
+                        <p>Руководство группой внедрения и поддержки платформы ГОСТЕХ. Исполнение роли релиз-менеджера. Ресурсное планирование.</p>
+                    </div>
+                </div>
+                <div class="timeline-item reveal">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">Март 2020 — Март 2021</span>
+                        <h3>Начальник группы</h3>
+                        <p class="timeline-company">Nexign (Санкт-Петербург)</p>
+                        <p>Руководство группой внедрения продуктов OCS-контура. Соблюдение KPI подразделения, ресурсное планирование. Проектная деятельность (архитектор решений/технический менеджер).</p>
+                    </div>
+                </div>
+                <div class="timeline-item reveal">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">Февраль 2018 — Март 2020</span>
+                        <h3>Архитектор проектов внедрения</h3>
+                        <p class="timeline-company">Nexign (Санкт-Петербург)</p>
+                        <p>Solution Architect/Technical Manager в проектах внедрения биллинговой системы. Внедрение и адаптации коробочного ПО под требования заказчиков. Постановка задач и технический надзор за командой из 30+ человек. Разработка технических разделов для коммерческих предложений. Управление техническим долгом.</p>
+                    </div>
+                </div>
+                <div class="timeline-item reveal">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">Сентябрь 2011 — Февраль 2018</span>
+                        <h3>Ведущий инженер-программист</h3>
+                        <p class="timeline-company">Nexign (Санкт-Петербург)</p>
+                        <p>Техподдержка направлений Online/Offline charging, Roaming, Billing. Managed Service, Trouble shooting, Incident Management.</p>
+                    </div>
+                </div>
+                <div class="timeline-item reveal">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">Август 2010 — Сентябрь 2011</span>
+                        <h3>Руководитель отдела эксплуатации BSS систем</h3>
+                        <p class="timeline-company">МегаФон (Самара)</p>
+                        <p>Руководство отделом внедрения, поддержки, эксплуатации биллинговой системы оператора связи.</p>
+                    </div>
+                </div>
+                <div class="timeline-item reveal">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">Сентябрь 2007 — Август 2010</span>
+                        <h3>Ведущий инженер-программист</h3>
+                        <p class="timeline-company">МегаФон (Самара)</p>
+                        <p>Эксплуатация биллинговой системы. Billing, Online/Offline charging, PGW, CRM. Trouble shooting, Incident Management.</p>
+                    </div>
+                </div>
+                <div class="timeline-item reveal">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">Май 2006 — Июнь 2007</span>
+                        <h3>Инженер-программист</h3>
+                        <p class="timeline-company">МТС (Самара)</p>
+                        <p>Мониторинг IT-системы.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Контакты -->
+    <section class="section section-alt" id="contacts">
+        <div class="grid-bg"></div>
+        <div class="container">
+            <h2 class="section-title">Контакты</h2>
+            <div class="contacts-row">
+                <a href="https://t.me/kirill_tolkachev" class="contact-card" target="_blank" rel="noopener">
+                    <div class="contact-icon">💬</div>
+                    <span class="contact-label">Telegram</span>
+                    <span class="contact-value">@kirill_tolkachev</span>
+                </a>
+                <a href="mailto:ktolkachev@gmail.com" class="contact-card">
+                    <div class="contact-icon">✉️</div>
+                    <span class="contact-label">Email</span>
+                    <span class="contact-value">ktolkachev@gmail.com</span>
+                </a>
+                <a href="https://linkedin.com/in/ktolkachev" class="contact-card" target="_blank" rel="noopener">
+                    <div class="contact-icon">🔗</div>
+                    <span class="contact-label">LinkedIn</span>
+                    <span class="contact-value">ktolkachev</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Футер -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Кирилл Толкачев. Сделано с ❤️ к архитектуре.</p>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
